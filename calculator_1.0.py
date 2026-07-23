@@ -1,4 +1,14 @@
 import tkinter as tk
+from PIL import Image, ImageTk
+app = tk.Tk()
+background_image = Image.open("Calc_background.png")
+background_image = background_image.resize((500, 400))
+background_photo = ImageTk.PhotoImage(background_image)
+background = tk.Label(
+    app,
+    image=background_photo
+)
+
 
 root = tk.Tk()
 root.title("Scientific Calculator")
